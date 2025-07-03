@@ -1,6 +1,7 @@
 import streamlit as st
 from weasyprint import HTML, CSS
 from base64 import b64encode
+from jinja2 import Environment, FileSystemLoader
 
 def gen_pdf():
     environment = Environment(loader=FileSystemLoader("templates"))
