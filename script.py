@@ -7,7 +7,7 @@ def gen_pdf():
     environment = Environment(loader=FileSystemLoader("templates"))
     report = environment.get_template("cover.html")
     html = HTML(string=report.render())
-    html.write_pdf('cover.pdf')
+    html.write_pdf('/temp/cover.pdf')
 
 with st.form("form"):
     name = st.text_input("Enter Your Name")
