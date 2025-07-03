@@ -3,14 +3,10 @@ from weasyprint import HTML, CSS
 from base64 import b64encode
 
 def gen_pdf():
-    html = HTML(string='''
-    <h1>The title</h1>
-    <p>Content goes here</p>
-    ''')
-    css = CSS(string='@page { size: A4; margin: 1cm }')
-    html.write_pdf('example.pdf', stylesheets=[css])
-
-st.title('Assignment Cover Generator')
+    environment = Environment(loader=FileSystemLoader("templates"))
+    report = environment.get_template("cover.html")
+    html = HTML(string=report.render())
+    html.write_pdf('cover.pdf')
 
 with st.form("form"):
     name = st.text_input("Enter Your Name")
