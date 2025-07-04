@@ -1,0 +1,5 @@
+streamlit
+streamlit-pdf-viewer
+jinja2
+weasyprint
+base64

@@ -26,7 +26,8 @@ with st.form("form"):
 if submitted:
     if not name:
         st.error("Name is required")
-    st.success("Success!")
+    st.success("Success!. Press Download to save the pdf!")
     pdf_bytes = gen_pdf()
+    st.download_button(label="Download PDF",data=pdf_bytes,mime="application/pdf")
     pdf_viewer(input=pdf_bytes, width=700, height=800)
 
