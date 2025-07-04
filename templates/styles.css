@@ -1,6 +1,29 @@
 @page {
-    size: A4;
+    size: A4 portrait;
+    border: 1px solid black;
 }
-h1 {
+* {
+    margin: 0;
+    padding: 0;
+}
+.cover h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+
+
+}
+html,body {
+    height: 100%;
+}
+
+.cover {
     text-align: center;
+}
+.extra-info {
+    position: absolute;
+    bottom: 8%;
+    right: 8%;
+    text-align: left;
+    font-size: 16px;
 }
